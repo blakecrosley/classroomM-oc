@@ -54,22 +54,27 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        Fraction *myFraction;
+        Fraction    *frac1 = [[Fraction alloc] init];
+        Fraction    *frac2 = [[Fraction alloc] init];
         
-        // Create an instance of a Fraction
+        // Set frac1 to 2/3
         
-        myFraction = [Fraction alloc];
-        myFraction = [myFraction init];
+        [frac1 setNumerator: 2];
+        [frac1 setDenomenator: 3];
         
-        // Set fraction to 1/3
+        // Set frac1 to 2/3
         
-        [myFraction setNumerator:1];
-        [myFraction setDenomenator:3];
+        [frac2 setNumerator: 3];
+        [frac2 setDenomenator: 7];
+
+        // Display the fractions
         
-        // Display the fraction using the print method
+        NSLog(@"First fraction is:");
         
-        NSLog(@"The value of myFraction is:");
-        [myFraction  print];
+        [frac1 print];
+        
+        NSLog(@"Second fraction is:");
+        [frac2 print];
         
     }
     return 0;
