@@ -17,6 +17,8 @@
 - (void) print;
 - (void) setNumerator: (int) n;
 - (void) setDenomenator: (int) d;
+- (int) numerator;
+- (int) denomenator;
 
 @end
 
@@ -30,21 +32,28 @@
 }
 
 - (void) print;
-
 {
     NSLog(@"%i/%i", numerator, denomenator);
 }
 
 -(void) setNumerator:(int)n
-
 {
     numerator = n;
 }
 
 - (void) setDenomenator:(int)d
-
 {
     denomenator = d;
+}
+
+-(int) numerator
+{
+    return numerator;
+}
+
+-(int) denomenator
+{
+    return denomenator;
 }
 
 @end
@@ -69,12 +78,9 @@ int main(int argc, const char * argv[])
 
         // Display the fractions
         
-        NSLog(@"First fraction is:");
+        NSLog(@"First fraction is: %i/%i", [frac1 numerator], [frac1 denomenator]);
         
-        [frac1 print];
-        
-        NSLog(@"Second fraction is:");
-        [frac2 print];
+        NSLog(@"Second fraction is: %i/%i", [frac2 numerator], [frac2 denomenator]);
         
     }
     return 0;
