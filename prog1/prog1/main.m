@@ -10,15 +10,66 @@
 
 #import <Foundation/Foundation.h>
 
+// ------- @interface section -------
+
+@interface Fraction : NSObject
+
+- (void) print;
+- (void) setNumerator: (int) n;
+- (void) setDenomenator: (int) d;
+
+@end
+
+// ------- @implementation section -------
+
+@implementation Fraction
+
+{
+    int numerator;
+    int denomenator;
+}
+
+- (void) print;
+
+{
+    NSLog(@"%i/%i", numerator, denomenator);
+}
+
+-(void) setNumerator:(int)n
+
+{
+    numerator = n;
+}
+
+- (void) setDenomenator:(int)d
+
+{
+    denomenator = d;
+}
+
+@end
+
+
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        int numerator, denomenator;
+        Fraction *myFraction;
         
-        numerator   = 1;
-        denomenator = 3;
-        NSLog(@"The fraction is %i/%i", numerator, denomenator);
+        // Create an instance of a Fraction
+        
+        myFraction = [Fraction alloc];
+        myFraction = [myFraction init];
+        
+        // Set fraction to 1/3
+        
+        [myFraction setNumerator:1];
+        [myFraction setDenomenator:3];
+        
+        // Display the fraction using the print method
+        
+        NSLog(@"The value of myFraction is:");
+        [myFraction  print];
         
     }
     return 0;
