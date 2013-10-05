@@ -6,18 +6,19 @@
 //  Copyright (c) 2013 ClassroomM-oc. All rights reserved.
 //
 
+//  Fractions - Class version
+
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        int sum, value1, value2;
+        int numerator, denomenator;
         
-        value1 = 87;
-        value2 = 15;
-        sum = value1 - value2;
-        NSLog(@"The sum of %i and %i is %i", value1, value2, sum);
+        numerator   = 1;
+        denomenator = 3;
+        NSLog(@"The fraction is %i/%i", numerator, denomenator);
         
     }
     return 0;
