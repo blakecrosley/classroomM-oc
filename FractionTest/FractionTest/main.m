@@ -25,6 +25,8 @@ int main(int argc, const char * argv[])
         NSLog(@"=");
         
         [aFraction add: bFraction];
+        
+        [aFraction reduce];
         [aFraction print];
     }
     return 0;
